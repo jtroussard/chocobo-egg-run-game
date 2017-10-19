@@ -72,6 +72,7 @@ private:
 	int dmgCount;
 
 	bool egg; // does player have an egg
+	bool home; // is player in the nest
 
 	ALLEGRO_BITMAP *image;
 	ALLEGRO_SAMPLE *hurt;

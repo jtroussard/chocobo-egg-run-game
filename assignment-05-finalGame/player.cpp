@@ -47,6 +47,8 @@ void Player::initPlayer(int width, int height)
 	dmgDelay = 10;
 	dmgCount = 0;
 
+	home = true;
+
 	cout << "Loading Player Image ..." << endl;
 	image = al_load_bitmap("assets/sprites/chocoboSpriteSheet.png");
 	if (image != NULL) {

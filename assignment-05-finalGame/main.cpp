@@ -249,6 +249,8 @@ int main(void) {
 
 	MapInitAnims();
 	bool ns = false;
+
+
 	// Game loop
 	cout << "Running game loop..." << endl;
 	while (!done) {
@@ -265,13 +267,10 @@ int main(void) {
 			}
 		}
 
-
-
 		if (musicOff) {
 			al_play_sample(aud_level_01, 1.25, 0.0, 1.0, ALLEGRO_PLAYMODE_LOOP, &id_aud_level01);
 			musicOff = false;
 		}
-
 
 		// Game clock management
 		currentTime = time(&currentTime); // update current time
@@ -321,7 +320,7 @@ int main(void) {
 			// Check for mappy tile collisions
 			if (p1.collisionHealBlock() || p1.collisionNestBlock()) {
 				// heal player
-				if (healEventTime == 0) { // player enters lava -- start counting
+				if (healEventTime == 0) { // player enters nest -- start counting
 					if (!healOn) {
 						p1.healPlayer(false);
 						healOn = true;
